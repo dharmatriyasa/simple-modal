@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-header{
+.full-screen{
     min-height: 100vh;
     width: 100%;
 }
@@ -69,6 +69,129 @@ nav{
 
 }
 
+.--section{
+    min-height: 80vh;
+    width: 100%;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col{
+    padding: 15px 50px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.button{
+    padding: 15px 75px;
+    border: 1px #630a34 solid;
+    background-color: #630a34;
+    color: #feffff;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition-duration: 0.3s;
+}
+
+.button:hover{
+    border: 1px #630a34 solid;
+    color: #630a34;
+    background-color: #feffff;
+}
+
+.modal{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-card{
+    padding: 50px 40px;
+    background-color: #feffff;
+    border-radius: 1rem;
+    width: 50%;
+}
+
+.col-1{
+    padding: 10px 0px;
+}
+
+.col-1 h1{
+    font-size: 18px;
+}
+
+.col-1 p{
+    font-size: 12px;
+}
+
+.col-1:nth-child(3){
+    margin: 1px 1px 1px auto;
+}
+
+.button-popup{
+    padding: 10px 25px;
+    border: 1px #630a34 solid;
+    background-color: #630a34;
+    color: #feffff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition-duration: 0.3s;
+}
+
+.show-animation{
+    animation: show 0.2s;
+}
+
+.hide-animation{
+    animation: hide 0.2s;
+}
+
+@keyframes show {
+    from{
+        transform: scale(0);
+        z-index: -1;
+    }
+
+    to{
+        transform: scale(1);
+        z-index: 2;
+    }
+}
+
+@keyframes hide {
+    from{
+        transform: scale(1);
+        z-index: 2;
+    }
+
+    to{
+        transform: scale(0);
+        z-index: -1;
+    }
+}
+
+  
+
 /* .test{
     border: 1px solid red;
 } */
@@ -80,7 +203,21 @@ nav{
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+    .modal-card{
+        padding: 75px;
+    }
+    .col-1 h1{
+        font-size: 28px;
+    }
     
+    .col-1 p{
+        font-size: 20px;
+    }
+
+    .button-popup{
+        padding: 20px 40px;
+        font-size: 24px;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -109,6 +246,26 @@ nav{
     .hamburger {
         display: none;
     }
+
+    .col{
+        padding: 15px 275px;
+    }
+
+    .col-1{
+        padding: 15px 75px;
+    }
+
+    .modal-card{
+        padding: 40px 0px;
+        width: 50%;
+    }
+
+    .button-popup{
+        padding: 15px 35px;
+        font-size: 24px;
+    }
+
+    
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
